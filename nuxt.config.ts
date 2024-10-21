@@ -11,6 +11,10 @@ export default defineNuxtConfig({
         { name: "viewport", content: "width=device-width, initial-scale=1" },
         { name: "description", content: "My Nuxt.js + Tailwind CSS project" },
       ],
+
     },
   },
+  runtimeConfig: {
+    databaseConfig : process.env.DATABASE_API_KEY
+  }
 });

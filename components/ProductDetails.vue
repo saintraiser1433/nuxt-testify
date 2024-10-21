@@ -2,22 +2,27 @@
   <div class="card w-full">
     <div class="grid grid-cols-2 gap-10">
       <div class="p-7">
-        <img :src="product.image" alt="product img" class="mx-auto my-7">
+        <img
+          :src="product.featuredImage"
+          alt="product img"
+          class="mx-auto my-7"
+        />
       </div>
       <div class="p-7">
-        <h2 class="text-4xl my-7">{{ product.title }}</h2>
-        <p class="text-xl my-7">Price - ${{ product.price }}</p>
+        <h2 class="text-4xl my-7">{{ product.name }}</h2>
+        <p class="text-xl my-7">Price - ${{ product.basePrice }}</p>
         <h3 class="font-bold border-b-2 mb-4 pb-2">Product description:</h3>
         <p class="mb-7">{{ product.description }}</p>
+        <button class="btn flex">
+          <span>Add to Cart</span>
+        </button>
       </div>
     </div>
-
   </div>
 </template>
 
 <script setup>
-
-const { product } = defineProps(['product'])
+const { product } = defineProps(["product"]);
 </script>
 
 <style scoped>
